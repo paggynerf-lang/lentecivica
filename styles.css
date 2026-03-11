@@ -696,3 +696,9 @@ input {
     gap: 12px 14px;
   }
 }
+.article-image {
+  width: 100%;
+  display: block;
+  border-radius: 24px;
+  object-fit: cover;
+}
