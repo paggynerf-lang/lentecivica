@@ -708,4 +708,9 @@ input {
   .article-image {
     height: 260px;
   }
+  .card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
 }
