@@ -16,10 +16,9 @@
       </div>
 
       <nav class="main-nav">
-        <a href="#ultimi-articoli">Attualità</a>
-        <a href="#ultimi-articoli">Politica</a>
-        <a href="#ultimi-articoli">Giustizia</a>
-        <a href="#ultimi-articoli">Esteri</a>
+        <a href="#prima-pagina">Prima pagina</a>
+        <a href="#focus">Focus</a>
+        <a href="#dossier">Dossier</a>
         <a href="#editoriali">Editoriali</a>
         <a href="#newsletter">Newsletter</a>
       </nav>
@@ -27,168 +26,189 @@
   </header>
 
   <main>
-    <section class="hero-section">
-      <div class="container hero-grid">
-        <article class="hero-main card">
-          <div class="pill pill-blue">Manifesto editoriale</div>
-          <h1>Capire il potere senza semplificazioni: uno spazio editoriale per leggere il presente</h1>
-          <p class="hero-text">
-            Lente Civica è una testata indipendente che unisce attualità, politica, giustizia ed esteri
-            in un linguaggio chiaro, serio e argomentato. Un luogo pensato per leggere il presente
-            senza cedere alla superficialità del rumore quotidiano.
-          </p>
-          <div class="meta">
-            <span>Redazione</span>
-            <span>•</span>
-            <span>Magazine di analisi</span>
-            <span>•</span>
-            <span>Aggiornato al 2026</span>
-          </div>
-          <div class="hero-actions">
-            <a class="btn btn-blue" href="#ultimi-articoli">Esplora gli articoli</a>
-            <a class="btn btn-light" href="#editoriali">La linea della testata</a>
-          </div>
-        </article>
-
-        <aside class="hero-side">
-          <div class="manifesto card-dark">
-            <div class="eyebrow eyebrow-dark">Manifesto</div>
-            <h2>Una lente civile su politica, giustizia, società ed esteri.</h2>
-            <p>
-              Un progetto editoriale giovane, serio e leggibile, pensato per chi vuole farsi un’idea
-              con più profondità, più metodo e meno slogan.
-            </p>
-          </div>
-
-          <article class="mini-card card">
-            <div class="mini-category">Giustizia</div>
-            <h3>Riforme e garanzie: perché il dibattito giuridico riguarda tutti</h3>
+    <section class="front-page-hero" id="prima-pagina">
+      <div class="container">
+        <div class="front-page-grid">
+          <article class="lead-feature">
+            <div class="lead-feature-inner">
+              <div class="eyebrow">Apertura</div>
+              <div class="lead-kicker">Politica economica</div>
+              <h1>Non basta crescere, bisogna decidere chi incassa la crescita</h1>
+              <p class="lead-summary">
+                Dal confronto tra Boldrin e Bonelli emerge una domanda più profonda: basta far crescere il paese oppure bisogna decidere fin dall’inizio chi beneficia davvero di quella crescita, chi resta indietro e quali rendite continuano a dominare il sistema.
+              </p>
+              <div class="meta">
+                <span>Redazione</span>
+                <span>•</span>
+                <span>8 min di lettura</span>
+                <span>•</span>
+                <span>Nuova analisi</span>
+              </div>
+              <div class="hero-actions">
+                <a class="btn btn-blue" href="articoli/boldrin-bonelli-crescita-redistribuzione.html">Leggi l’analisi</a>
+                <a class="btn btn-light" href="#focus">Scorri la prima pagina</a>
+              </div>
+            </div>
           </article>
 
-          <article class="story-card card">
-            <a href="articoli/crisi-internazionali.html" class="card-link">
+          <aside class="front-side-stack">
+            <article class="front-side-card front-manifesto">
+              <div class="eyebrow eyebrow-soft">Manifesto</div>
+              <h2>Un giornale che prova a capire prima di schierarsi.</h2>
+              <p>
+                Politica, diritto, attualità ed esteri letti con più profondità, meno slogan e una voce editoriale riconoscibile.
+              </p>
+            </article>
+
+            <article class="front-side-card front-dossier" id="dossier">
+              <div class="eyebrow">Dossier</div>
+              <div class="story-category">Giustizia</div>
+              <h3>Dossier sulla separazione delle carriere: guida ragionata al voto</h3>
+              <p>Una panoramica sintetica dei nodi principali del referendum, con possibilità di aprire il dossier completo in PDF.</p>
+              <a href="articoli/dossier-separazione-carriere.html" class="inline-read">Apri il dossier</a>
+            </article>
+
+            <article class="front-side-card front-mini-article">
+              <div class="eyebrow">Ultimo pezzo</div>
               <div class="story-category">Esteri</div>
               <h3>Crisi internazionali, diritto e propaganda: come leggere davvero gli eventi</h3>
-              <p>Una riflessione su come interpretare i conflitti senza cadere nella semplificazione mediatica, tenendo insieme interessi, norme e costruzione del consenso.</p>
-              <div class="meta">Redazione · 4 min</div>
-            </a>
-          </article>
-        </aside>
+              <a href="articoli/crisi-internazionali.html" class="inline-read">Leggi l’articolo</a>
+            </article>
+          </aside>
+        </div>
       </div>
     </section>
 
-    <section class="content-section" id="ultimi-articoli">
+    <section class="signal-band">
+      <div class="container signal-band-inner">
+        <div class="signal-label">Temi caldi</div>
+        <div class="signal-items">
+          <span>produttività</span>
+          <span>redistribuzione</span>
+          <span>giustizia</span>
+          <span>politica estera</span>
+          <span>energia</span>
+          <span>sanità</span>
+          <span>università</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="magazine-section" id="focus">
       <div class="container">
-        <div class="section-head">
+        <div class="magazine-head">
           <div>
-            <div class="eyebrow">Ultimi articoli</div>
-            <h2>In evidenza</h2>
+            <div class="eyebrow">Focus</div>
+            <h2>Le analisi che definiscono la linea</h2>
           </div>
-          <div class="section-note">Selezione della Redazione</div>
+          <div class="section-note">Prima pagina di Lente Civica</div>
         </div>
 
-        <div class="grid-3">
-          <article class="story-card card">
-            <a href="articoli/boldrin-bonelli-crescita-redistribuzione.html" class="card-link">
-              <div class="story-category">Politica</div>
-              <h3>Non basta crescere, bisogna decidere chi incassa la crescita</h3>
-              <p>Dal confronto tra Boldrin e Bonelli emerge una domanda più profonda: basta far crescere il paese o bisogna anche decidere chi beneficia davvero di quella crescita?</p>
-              <div class="meta">Redazione · 8 min</div>
-            </a>
-          </article>
-
-          <article class="story-card card">
+        <div class="magazine-grid">
+          <article class="mag-card mag-card-large">
             <a href="articoli/capitalismo-politica-estera.html" class="card-link">
               <div class="story-category">Politica</div>
               <h3>Capitalismo globale e politica estera: quanta guerra economica regge il nostro benessere?</h3>
-              <p>Dai mercati globali alle rotte energetiche, un’analisi su come molte scelte di politica estera vengano presentate come necessità economiche.</p>
+              <p>
+                Dai mercati globali alle rotte energetiche, un’analisi su come molte scelte di politica estera vengano presentate come necessità economiche, quando in realtà nascondono rapporti di forza e modelli di sviluppo molto precisi.
+              </p>
               <div class="meta">Redazione · 5 min</div>
             </a>
           </article>
 
-          <article class="story-card card">
-            <a href="articoli/dossier-separazione-carriere.html" class="card-link">
-              <div class="story-category">Giustizia</div>
-              <h3>Dossier sulla separazione delle carriere: guida ragionata al voto</h3>
-              <p>Una panoramica sintetica dei nodi principali del referendum, con possibilità di aprire il dossier completo in PDF.</p>
-              <div class="meta">Redazione · 4 min</div>
-            </a>
-          </article>
-
-          <article class="story-card card">
+          <article class="mag-card">
             <a href="articoli/crisi-internazionali.html" class="card-link">
               <div class="story-category">Esteri</div>
               <h3>Crisi internazionali, diritto e propaganda: come leggere davvero gli eventi</h3>
-              <p>Una riflessione su come interpretare i conflitti senza cadere nella semplificazione mediatica, tenendo insieme interessi, norme e costruzione del consenso.</p>
+              <p>Una riflessione su come interpretare i conflitti senza cadere nella semplificazione mediatica.</p>
               <div class="meta">Redazione · 4 min</div>
             </a>
           </article>
 
-          <article class="story-card card">
-            <div class="story-category">Attualità</div>
-            <h3>Notizie veloci e analisi lente: la differenza tra informare e capire</h3>
-            <p>Uno spazio per approfondire i fatti senza inseguire il rumore del giorno.</p>
-            <div class="meta">Redazione · 5 min</div>
-          </article>
-
-          <article class="story-card card">
-            <div class="story-category">Editoriali</div>
-            <h3>Avere una posizione senza rinunciare alla complessità</h3>
-            <p>Commenti e letture argomentate, senza tifoseria e senza neutralità di facciata.</p>
-            <div class="meta">Redazione · 5 min</div>
+          <article class="mag-card">
+            <a href="articoli/dossier-separazione-carriere.html" class="card-link">
+              <div class="story-category">Giustizia</div>
+              <h3>Dossier sulla separazione delle carriere: guida ragionata al voto</h3>
+              <p>Una guida sintetica ma strutturata per orientarsi nel referendum.</p>
+              <div class="meta">Redazione · 4 min</div>
+            </a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section-band">
-      <div class="container">
-        <div class="eyebrow">Sezioni</div>
-        <div class="tags">
-          <span>Attualità</span>
-          <span>Politica</span>
-          <span>Giustizia</span>
-          <span>Esteri</span>
-          <span>Società</span>
-          <span>Editoriali</span>
-        </div>
-      </div>
-    </section>
+    <section class="split-feature-section">
+      <div class="container split-feature-grid">
+        <div class="split-left">
+          <div class="eyebrow">In evidenza</div>
+          <h2>Articoli, dossier e nodi del presente</h2>
 
-    <section class="content-section" id="editoriali">
-      <div class="container split-grid">
-        <div>
-          <div class="eyebrow">Editoriali</div>
-          <h2>La linea della testata</h2>
-
-          <div class="editorial-list">
-            <article class="editorial-card card">
-              <div class="mini-category red">Editoriale</div>
-              <h3>Perché una testata giovane non deve imitare i grandi quotidiani per essere autorevole</h3>
+          <div class="stacked-articles">
+            <article class="stack-article">
+              <a href="articoli/boldrin-bonelli-crescita-redistribuzione.html" class="card-link">
+                <div class="story-category">Politica</div>
+                <h3>Non basta crescere, bisogna decidere chi incassa la crescita</h3>
+                <p>Produttività, salari, patrimoniale, welfare, energia, sanità e pensioni: il confronto Boldrin-Bonelli come sintomo di una frattura più profonda.</p>
+              </a>
             </article>
 
-            <article class="editorial-card card">
-              <div class="mini-category red">Editoriale</div>
-              <h3>Il diritto non è una nicchia: è uno dei modi più seri per leggere il presente</h3>
+            <article class="stack-article">
+              <a href="articoli/capitalismo-politica-estera.html" class="card-link">
+                <div class="story-category">Politica</div>
+                <h3>Capitalismo globale e politica estera: quanta guerra economica regge il nostro benessere?</h3>
+                <p>Quando la neutralità tecnica serve a coprire rapporti di forza, dipendenze materiali e scelte di dominio.</p>
+              </a>
             </article>
 
-            <article class="editorial-card card">
-              <div class="mini-category red">Editoriale</div>
-              <h3>L’opinione pubblica si forma sempre di più sulla velocità e sempre meno sulla profondità</h3>
+            <article class="stack-article">
+              <a href="articoli/crisi-internazionali.html" class="card-link">
+                <div class="story-category">Esteri</div>
+                <h3>Crisi internazionali, diritto e propaganda: come leggere davvero gli eventi</h3>
+                <p>Capire una crisi significa tenere insieme interessi, diritto e costruzione del consenso.</p>
+              </a>
             </article>
           </div>
         </div>
 
-        <aside class="about-box">
-          <div class="eyebrow eyebrow-soft">Chi siamo</div>
-          <h2>Una voce giovane, civile, argomentata</h2>
-          <p>
-            Lente Civica nasce dall’incontro tra studio del diritto, passione per l’attualità e attenzione
-            per il dibattito pubblico. Il progetto vuole offrire articoli chiari, leggibili e seri,
-            firmati dalla Redazione, con una prospettiva critica ma accessibile.
-          </p>
-          <a href="#ultimi-articoli" class="btn btn-white">Esplora gli articoli</a>
+        <aside class="split-right">
+          <div class="vertical-panel">
+            <div class="eyebrow eyebrow-soft">Linea editoriale</div>
+            <h3>Una voce giovane, civile, argomentata</h3>
+            <p>
+              Lente Civica nasce dall’incontro tra studio del diritto, passione per l’attualità e attenzione per il dibattito pubblico. L’obiettivo non è riempire spazio, ma costruire una lente.
+            </p>
+            <a href="#editoriali" class="btn btn-white">Vai agli editoriali</a>
+          </div>
         </aside>
+      </div>
+    </section>
+
+    <section class="editorial-zone" id="editoriali">
+      <div class="container">
+        <div class="magazine-head">
+          <div>
+            <div class="eyebrow">Editoriali</div>
+            <h2>La linea della testata</h2>
+          </div>
+          <div class="section-note">Visione, metodo, tono</div>
+        </div>
+
+        <div class="editorial-zone-grid">
+          <article class="editorial-panel">
+            <div class="mini-category red">Editoriale</div>
+            <h3>Perché una testata giovane non deve imitare i grandi quotidiani per essere autorevole</h3>
+          </article>
+
+          <article class="editorial-panel">
+            <div class="mini-category red">Editoriale</div>
+            <h3>Il diritto non è una nicchia: è uno dei modi più seri per leggere il presente</h3>
+          </article>
+
+          <article class="editorial-panel">
+            <div class="mini-category red">Editoriale</div>
+            <h3>L’opinione pubblica si forma sempre di più sulla velocità e sempre meno sulla profondità</h3>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -198,8 +218,7 @@
           <div class="eyebrow eyebrow-dark">Newsletter</div>
           <h2>Ricevi nuovi articoli e editoriali</h2>
           <p>
-            Un riepilogo ordinato dei contenuti pubblicati da Lente Civica, tra attualità, politica,
-            diritto ed esteri. Un modo semplice per restare aggiornati senza perdere profondità.
+            Un riepilogo ordinato dei contenuti pubblicati da Lente Civica, tra attualità, politica, diritto ed esteri.
           </p>
         </div>
 
