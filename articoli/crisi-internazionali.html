@@ -191,5 +191,22 @@
       <div class="footer-copy">© 2026 Lente Civica</div>
     </div>
   </footer>
+  <script>
+  (() => {
+    const bar = document.getElementById('readingBar');
+    if (!bar) return;
+
+    const updateReadingBar = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      bar.style.width = `${Math.min(progress, 100)}%`;
+    };
+
+    updateReadingBar();
+    window.addEventListener('scroll', updateReadingBar, { passive: true });
+    window.addEventListener('resize', updateReadingBar);
+  })();
+</script>
 </body>
 </html>
