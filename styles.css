@@ -1849,74 +1849,313 @@ input {
   border: 1px solid #C084FC;
 }
 
-.glauco-spotlight-card {
+/* ===== INSTAGRAM VERTICAL FEED CARDS (ASPECT RATIO 4:5) ===== */
+.insta-feed-grid {
   display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 32px;
-  align-items: center;
-  padding: 36px;
-  border-radius: 34px;
-  background: linear-gradient(145deg, #1E293B 0%, #0F172A 100%);
-  border: 1px solid rgba(126, 67, 130, 0.45);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
-  margin-top: 36px;
-  position: relative;
-  overflow: hidden;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+  margin-top: 32px;
 }
 
-.glauco-spotlight-card::before {
+.insta-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 480px;
+  aspect-ratio: 4 / 5;
+  padding: 32px 28px 24px;
+  border-radius: 28px;
+  background: linear-gradient(165deg, #1E293B 0%, #151F2F 55%, #0F172A 100%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s cubic-bezier(.22,.61,.36,1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.insta-card::before {
   content: "";
   position: absolute;
-  top: -60px;
-  left: -60px;
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(192, 132, 252, 0.18), transparent 70%);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #7E4382, #C084FC);
+  opacity: 0.85;
+}
+
+.insta-card:hover {
+  transform: translateY(-8px) scale(1.015);
+  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.55), 0 0 30px rgba(126, 67, 130, 0.3);
+  border-color: rgba(192, 132, 252, 0.45);
+}
+
+.insta-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.insta-channel-badge {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #C084FC;
+}
+
+.insta-slide-counter {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #94A3B8;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.insta-card-badge {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 6px 14px;
+  border-radius: 10px;
+  background: #7E4382;
+  color: #FFFFFF;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.insta-card-title {
+  margin: 0;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #FFFFFF;
+  letter-spacing: -0.03em;
+}
+
+.insta-card-body {
+  margin: 14px 0 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.75;
+  color: #CBD5E1;
+  flex-grow: 1;
+}
+
+.insta-card-meta {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 12px;
+  color: #94A3B8;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  padding-top: 14px;
+}
+
+.insta-card-action {
+  margin-top: 14px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 14px;
+  background: rgba(126, 67, 130, 0.25);
+  border: 1px solid rgba(192, 132, 252, 0.3);
+  color: #FFFFFF;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.insta-card:hover .insta-card-action {
+  background: #7E4382;
+  border-color: #C084FC;
+  box-shadow: 0 4px 16px rgba(126, 67, 130, 0.45);
+}
+
+/* ===== GLAUCO FLOATING WIDGET (IN BASSO A DESTRA) ===== */
+.glauco-float-container {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   pointer-events: none;
 }
 
-.glauco-spotlight-img {
-  width: 100%;
-  aspect-ratio: 1;
-  border-radius: 26px;
-  object-fit: cover;
-  border: 2px solid rgba(192, 132, 252, 0.45);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+.glauco-bubble {
+  pointer-events: auto;
+  width: 320px;
+  padding: 22px;
+  margin-bottom: 14px;
+  border-radius: 24px;
+  background: #1E293B;
+  border: 1.5px solid rgba(192, 132, 252, 0.45);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 25px rgba(126, 67, 130, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px) scale(0.95);
+  transition: all 0.28s cubic-bezier(.22,.61,.36,1);
+  position: relative;
 }
 
-.glauco-spotlight-content h3 {
-  margin: 6px 0 0;
-  font-size: 1.85rem;
+.glauco-bubble.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.glauco-bubble-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.glauco-bubble-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
   color: #FFFFFF;
 }
 
-.glauco-spotlight-content p {
-  margin: 10px 0 0;
-  color: #CBD5E1;
-  font-family: 'Inter', system-ui, sans-serif;
-  font-size: 15px;
-  line-height: 1.8;
+.glauco-bubble-close {
+  background: transparent;
+  border: 0;
+  color: #94A3B8;
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+  transition: color 0.15s;
 }
 
-.glauco-quote {
-  margin-top: 16px;
-  padding: 12px 18px;
-  border-left: 3px solid #C084FC;
-  background: rgba(126, 67, 130, 0.18);
-  border-radius: 0 14px 14px 0;
+.glauco-bubble-close:hover {
+  color: #FFFFFF;
+}
+
+.glauco-bubble-text {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.65;
+  color: #CBD5E1;
+  margin: 0 0 12px;
+}
+
+.glauco-bubble-quote {
+  padding: 8px 12px;
+  border-left: 2px solid #C084FC;
+  background: rgba(126, 67, 130, 0.2);
+  border-radius: 0 10px 10px 0;
   font-style: italic;
-  font-size: 14px;
+  font-size: 12px;
   color: #E2E8F0;
+  margin-bottom: 14px;
+}
+
+.glauco-bubble-cta {
+  display: block;
+  text-align: center;
+  padding: 9px 14px;
+  border-radius: 12px;
+  background: #7E4382;
+  color: #FFFFFF;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.glauco-bubble-cta:hover {
+  background: #9B5A9F;
+}
+
+.glauco-float-btn {
+  pointer-events: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 18px 6px 6px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #1E293B, #0F172A);
+  border: 2px solid #C084FC;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(192, 132, 252, 0.4);
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(.22,.61,.36,1), box-shadow 0.25s ease;
+}
+
+.glauco-float-btn:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6), 0 0 28px rgba(192, 132, 252, 0.6);
+}
+
+.glauco-float-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #C084FC;
+}
+
+.glauco-float-label {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  text-align: left;
+}
+
+.glauco-float-sub {
+  font-size: 10px;
+  color: #C084FC;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 @media (max-width: 780px) {
-  .glauco-spotlight-card {
+  .insta-feed-grid {
     grid-template-columns: 1fr;
-    text-align: center;
   }
-  .glauco-spotlight-img {
-    max-width: 180px;
-    margin: 0 auto;
+  .insta-card {
+    min-height: auto;
+    aspect-ratio: auto;
+  }
+  .glauco-float-container {
+    bottom: 20px;
+    right: 20px;
+  }
+  .glauco-bubble {
+    width: min(300px, calc(100vw - 40px));
   }
 }
