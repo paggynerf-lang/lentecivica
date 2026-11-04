@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Crisi internazionali, diritto e propaganda - Minerva Osservatorio Politico</title>
   <meta name="description" content="Come leggere davvero una crisi internazionale tra rapporti di forza, diritto e propaganda." />
+  
+  <!-- OPEN GRAPH / SOCIAL PREVIEW -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Minerva Osservatorio Politico" />
+  <meta property="og:title" content="Crisi internazionali, diritto e propaganda: come leggere davvero gli eventi" />
+  <meta property="og:description" content="Tra rapporti di forza, diritto internazionale e costruzione del consenso, capire una crisi significa resistere alla fretta di schierarsi." />
+  <meta property="og:image" content="https://paggynerf-lang.github.io/lentecivica/img/glauco.png" />
+  <meta property="og:url" content="https://paggynerf-lang.github.io/lentecivica/articoli/crisi-internazionali.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
@@ -32,6 +42,7 @@
       <nav class="main-nav">
         <a href="../index.html#feed">Feed Caroselli</a>
         <a href="../index.html#editoriali">Editoriali</a>
+        <a href="../chi-siamo.html">Chi Siamo</a>
         <a href="../index.html#newsletter">Archivio Fonti</a>
         <a href="https://www.instagram.com/minervavoxlab" target="_blank" rel="noopener" class="nav-ig-btn">@minervavoxlab ↗</a>
       </nav>
@@ -136,6 +147,22 @@
                 Leggere una crisi internazionale in modo serio significa rifiutare sia la propaganda più scoperta sia la
                 semplificazione emotiva, cercando di tenere insieme rapporti di forza, diritto e costruzione della narrazione.
               </p>
+            </div>
+
+            <!-- SOCIAL SHARE BAR -->
+            <div class="article-share-bar">
+              <span class="share-title">Condividi questa inchiesta</span>
+              <div class="share-buttons">
+                <a href="https://api.whatsapp.com/send?text=Crisi%20internazionali,%20diritto%20e%20propaganda:%20come%20leggere%20gli%20eventi%20-%20Minerva:%20https://paggynerf-lang.github.io/lentecivica/articoli/crisi-internazionali.html" target="_blank" rel="noopener" class="share-btn share-btn-wa">
+                  💬 WhatsApp
+                </a>
+                <a href="https://t.me/share/url?url=https://paggynerf-lang.github.io/lentecivica/articoli/crisi-internazionali.html&text=Crisi%20internazionali,%20diritto%20e%20propaganda%20-%20Minerva" target="_blank" rel="noopener" class="share-btn share-btn-tg">
+                  ✈️ Telegram
+                </a>
+                <button type="button" class="share-btn share-btn-copy" onclick="copyArticleLink(this)">
+                  📋 Copia Link
+                </button>
+              </div>
             </div>
           </div>
         </article>
@@ -264,6 +291,14 @@
 
   <!-- JAVASCRIPT: PROGRESS BAR & WIDGET GLAUCO -->
   <script>
+    function copyArticleLink(btn) {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        const orig = btn.innerHTML;
+        btn.innerHTML = '✓ Copiato!';
+        setTimeout(() => { btn.innerHTML = orig; }, 2000);
+      });
+    }
+
     (() => {
       // 1. Reading Progress Bar
       const bar = document.getElementById('readingBar');

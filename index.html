@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Minerva — Osservatorio Politico (@minervavoxlab)</title>
   <meta name="description" content="Minerva Osservatorio Politico (@minervavoxlab) - Inchieste, dati e analisi economiche nel formato carosello social." />
+  
+  <!-- OPEN GRAPH / SOCIAL PREVIEW -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Minerva Osservatorio Politico" />
+  <meta property="og:title" content="Minerva — Osservatorio Politico & Economico" />
+  <meta property="og:description" content="Dalle slide al dato: inchieste indipendenti, diritto costituzionale, macroeconomia e welfare basati su fonti ufficiali." />
+  <meta property="og:image" content="https://paggynerf-lang.github.io/lentecivica/img/glauco.png" />
+  <meta property="og:url" content="https://paggynerf-lang.github.io/lentecivica/index.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
@@ -27,6 +37,7 @@
       <nav class="main-nav">
         <a href="#feed">Feed Caroselli</a>
         <a href="#editoriali">Editoriali</a>
+        <a href="chi-siamo.html">Chi Siamo</a>
         <a href="#newsletter">Archivio Fonti</a>
         <a href="https://www.instagram.com/minervavoxlab" target="_blank" rel="noopener" class="nav-ig-btn">
           <span>@minervavoxlab</span> ↗
@@ -68,11 +79,20 @@
           </div>
         </div>
 
+        <!-- FILTRI RAPIDI PER CATEGORIA -->
+        <div class="feed-filters" id="feedFilters">
+          <button type="button" class="filter-btn active" data-filter="all">Tutti (5)</button>
+          <button type="button" class="filter-btn" data-filter="economia">Politica Economica</button>
+          <button type="button" class="filter-btn" data-filter="giustizia">Giustizia & Dossier</button>
+          <button type="button" class="filter-btn" data-filter="esteri">Geopolitica & Esteri</button>
+          <button type="button" class="filter-btn" data-filter="partecipazione">Partecipazione</button>
+        </div>
+
         <!-- GRID DEI CAROSELLI VERTICALI (FORMATO 4:5 SOCIAL FEED) -->
         <div class="insta-feed-grid">
           
           <!-- CAROSELLO 1: BOLDRIN-BONELLI (CRESCITA & REDISTRIBUZIONE) -->
-          <article class="insta-card">
+          <article class="insta-card" data-category="economia">
             <div class="insta-card-header">
               <span class="insta-channel-badge">@minervavoxlab</span>
               <span class="insta-slide-counter">Analisi 1/5</span>
@@ -83,7 +103,7 @@
               Dal confronto tra Boldrin e Bonelli emerge una domanda più profonda: basta far crescere il paese oppure bisogna decidere fin dall’inizio chi beneficia davvero di quella crescita, chi resta indietro e quali rendite dominano il sistema.
             </p>
             <div class="insta-card-meta">
-              <span>Redazione</span>
+              <span>Galassi Jacopo</span>
               <span>•</span>
               <span>8 min di lettura</span>
               <span>•</span>
@@ -97,7 +117,7 @@
           </article>
 
           <!-- CAROSELLO 2: SEPARAZIONE CARRIERE -->
-          <article class="insta-card">
+          <article class="insta-card" data-category="giustizia">
             <div class="insta-card-header">
               <span class="insta-channel-badge">@minervavoxlab</span>
               <span class="insta-slide-counter">Dossier 2/5</span>
@@ -122,7 +142,7 @@
           </article>
 
           <!-- CAROSELLO 3: SPAZIO POLITICO GIOVANILE -->
-          <article class="insta-card">
+          <article class="insta-card" data-category="partecipazione">
             <div class="insta-card-header">
               <span class="insta-channel-badge">@minervavoxlab</span>
               <span class="insta-slide-counter">Politica 3/5</span>
@@ -133,9 +153,9 @@
               Non una copia in miniatura dei partiti degli adulti, ma uno spazio reale per trasformare sfiducia, ascolto e presenza in politica vera, rompendo la marginalità a cui le nuove generazioni sono relegate.
             </p>
             <div class="insta-card-meta">
-              <span>Redazione</span>
+              <span>Galassi Jacopo</span>
               <span>•</span>
-              <span>7 min di lettura</span>
+              <span>11 min di lettura</span>
               <span>•</span>
               <span>Partecipazione</span>
             </div>
@@ -147,7 +167,7 @@
           </article>
 
           <!-- CAROSELLO 4: CAPITALISMO GLOBALE E POLITICA ESTERA -->
-          <article class="insta-card">
+          <article class="insta-card" data-category="esteri economia">
             <div class="insta-card-header">
               <span class="insta-channel-badge">@minervavoxlab</span>
               <span class="insta-slide-counter">Geopolitica 4/5</span>
@@ -172,7 +192,7 @@
           </article>
 
           <!-- CAROSELLO 5: CRISI INTERNAZIONALI -->
-          <article class="insta-card">
+          <article class="insta-card" data-category="esteri">
             <div class="insta-card-header">
               <span class="insta-channel-badge">@minervavoxlab</span>
               <span class="insta-slide-counter">Esteri 5/5</span>
@@ -247,10 +267,15 @@
           </p>
         </div>
 
-        <form class="newsletter-form">
-          <input type="email" placeholder="La tua email" required />
-          <button type="submit" class="btn btn-blue full">Iscriviti all'Archivio</button>
-        </form>
+        <div>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" id="newsletterEmail" placeholder="La tua email (es. nome@email.com)" required />
+            <button type="submit" class="btn btn-blue full">Iscriviti all'Archivio</button>
+          </form>
+          <div id="newsletterSuccess" style="display: none; margin-top: 12px; color: #34D399; font-size: 13.5px; font-weight: 600;">
+            ✓ Iscrizione registrata! Riceverai i prossimi dossier e aggiornamenti di Minerva.
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -264,6 +289,12 @@
           <div class="footer-logo">MINERVA</div>
           <div class="footer-text">Osservatorio Politico & Economico · Divulgazione e Data-Journalism (@minervavoxlab)</div>
         </div>
+      </div>
+      <div style="display: flex; gap: 18px; align-items: center; flex-wrap: wrap;">
+        <a href="chi-siamo.html" style="color: #CBD5E1; font-size: 13.5px; text-decoration: none;">Chi Siamo</a>
+        <a href="#feed" style="color: #CBD5E1; font-size: 13.5px; text-decoration: none;">Feed Caroselli</a>
+        <a href="#editoriali" style="color: #CBD5E1; font-size: 13.5px; text-decoration: none;">Editoriali</a>
+        <a href="https://www.instagram.com/minervavoxlab" target="_blank" rel="noopener" style="color: #C084FC; font-size: 13.5px; font-weight: 600; text-decoration: none;">Instagram ↗</a>
       </div>
       <div class="footer-copy">© 2026 Minerva Osservatorio Politico. Tutti i diritti riservati.</div>
     </div>
@@ -301,37 +332,73 @@
     </button>
   </aside>
 
-  <!-- JAVASCRIPT LEGGERO PER IL TOGGLE DEL WIDGET DI GLAUCO -->
+  <!-- JAVASCRIPT: TOGGLE WIDGET GLAUCO, FILTRI CATEGORIE, NEWSLETTER -->
   <script>
     (() => {
+      // 1. Filtri per Categoria
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.insta-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.dataset.filter;
+
+          cards.forEach(card => {
+            const categories = card.dataset.category || '';
+            if (filter === 'all' || categories.split(' ').includes(filter)) {
+              card.classList.remove('filter-hidden');
+            } else {
+              card.classList.add('filter-hidden');
+            }
+          });
+        });
+      });
+
+      // 2. Toggle Widget Glauco
       const toggle = document.getElementById('glaucoToggle');
       const bubble = document.getElementById('glaucoBubble');
       const close = document.getElementById('glaucoClose');
 
-      if (!toggle || !bubble || !close) return;
+      if (toggle && bubble && close) {
+        const toggleBubble = () => {
+          const isActive = bubble.classList.toggle('active');
+          toggle.setAttribute('aria-expanded', String(isActive));
+        };
 
-      const toggleBubble = () => {
-        const isActive = bubble.classList.toggle('active');
-        toggle.setAttribute('aria-expanded', String(isActive));
-      };
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          toggleBubble();
+        });
 
-      toggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        toggleBubble();
-      });
-
-      close.addEventListener('click', (e) => {
-        e.stopPropagation();
-        bubble.classList.remove('active');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
-
-      document.addEventListener('click', (e) => {
-        if (!bubble.contains(e.target) && !toggle.contains(e.target)) {
+        close.addEventListener('click', (e) => {
+          e.stopPropagation();
           bubble.classList.remove('active');
           toggle.setAttribute('aria-expanded', 'false');
-        }
-      });
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!bubble.contains(e.target) && !toggle.contains(e.target)) {
+            bubble.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+
+      // 3. Feedback Newsletter Form
+      const form = document.getElementById('newsletterForm');
+      const email = document.getElementById('newsletterEmail');
+      const success = document.getElementById('newsletterSuccess');
+      if (form && email && success) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          if (email.value) {
+            form.style.display = 'none';
+            success.style.display = 'block';
+          }
+        });
+      }
     })();
   </script>
 </body>
