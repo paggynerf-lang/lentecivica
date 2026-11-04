@@ -11,6 +11,11 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- BARRA DI PROGRESSO LETTURA -->
+  <div class="reading-progress" aria-hidden="true">
+    <div class="reading-progress-bar" id="readingBar"></div>
+  </div>
+
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand-group">
@@ -24,10 +29,9 @@
       </div>
 
       <nav class="main-nav">
-        <a href="index.html#prima-pagina">In Evidenza</a>
-        <a href="index.html#inchieste">Inchieste & Post</a>
-        <a href="index.html#dossier">Dossier</a>
-        <a href="index.html#metodo">Metodo Glauco</a>
+        <a href="index.html#feed">Feed Caroselli</a>
+        <a href="index.html#editoriali">Editoriali</a>
+        <a href="index.html#newsletter">Archivio Fonti</a>
         <a href="https://www.instagram.com/minervavoxlab" target="_blank" rel="noopener" class="nav-ig-btn">@minervavoxlab ↗</a>
       </nav>
     </div>
@@ -36,7 +40,7 @@
   <main>
     <section class="article-hero">
       <div class="container article-hero-inner">
-        <a href="index.html" class="back-link">← Torna alla home</a>
+        <a href="index.html#feed" class="back-link">← Torna al feed caroselli</a>
         <div class="pill pill-blue">Politica</div>
         <h1>Capire il potere senza semplificazioni: uno spazio editoriale per leggere il presente</h1>
         <p class="article-subtitle">
@@ -112,50 +116,71 @@
         </article>
 
         <aside class="article-sidebar">
-          <div class="sidebar-card card">
-            <div class="eyebrow">Scheda articolo</div>
+          <!-- SCHEDA ARTICOLO -->
+          <div class="sidebar-card">
+            <div class="eyebrow">Scheda Articolo</div>
             <div class="sidebar-info">
               <div>
                 <span class="label">Categoria</span>
-                <strong>Politica</strong>
+                <strong>Politica & Diritto</strong>
               </div>
               <div>
-                <span class="label">Firma</span>
-                <strong>Redazione</strong>
+                <span class="label">Autore</span>
+                <strong>Redazione Minerva</strong>
               </div>
               <div>
-                <span class="label">Tempo di lettura</span>
+                <span class="label">Tempo di Lettura</span>
                 <strong>7 minuti</strong>
               </div>
             </div>
-          </div>
-
-          <div class="sidebar-card card-dark">
-            <div class="eyebrow eyebrow-dark">Articoli correlati</div>
-
-            <div class="related-item">
-              <div class="mini-category soft-red">Giustizia</div>
-              <h3>Separazione delle carriere: perché il nodo non è solo tecnico</h3>
-            </div>
-
-            <div class="related-item">
-              <div class="mini-category soft-red">Attualità</div>
-              <h3>La crisi dell’informazione rapida e il bisogno di analisi più lente</h3>
-            </div>
-
-            <div class="related-item related-last">
-              <div class="mini-category soft-red">Esteri</div>
-              <h3>La politica internazionale spiegata oltre la propaganda</h3>
+            <div class="sidebar-badge">
+              <span class="badge-dot"></span> Fonti Ufficiali Verificate
             </div>
           </div>
 
-          <div class="sidebar-card light-card">
-            <div class="eyebrow">Newsletter</div>
-            <h3>Ricevi i prossimi articoli</h3>
-            <form class="newsletter-form stacked">
-              <input type="email" placeholder="La tua email" />
-              <button type="button" class="btn btn-blue full">Iscriviti</button>
-            </form>
+          <!-- CAROSELLI CORRELATI -->
+          <div class="sidebar-card">
+            <div class="eyebrow">Caroselli Correlati</div>
+            
+            <a href="articoli/boldrin-bonelli-crescita-redistribuzione.html" class="related-link">
+              <div class="related-item">
+                <span class="mini-category">Politica Economica</span>
+                <h3>Boldrin-Bonelli: Non basta crescere, bisogna decidere chi incassa la crescita</h3>
+              </div>
+            </a>
+
+            <a href="articoli/spazio-politico-giovanile.html" class="related-link">
+              <div class="related-item">
+                <span class="mini-category">Politica Giovanile</span>
+                <h3>Perché ricostruire uno spazio politico giovanile non è nostalgia ma necessità</h3>
+              </div>
+            </a>
+
+            <a href="articoli/dossier-separazione-carriere.html" class="related-link">
+              <div class="related-item">
+                <span class="mini-category">Giustizia & Dossier</span>
+                <h3>Dossier sulla separazione delle carriere: guida ragionata al voto</h3>
+              </div>
+            </a>
+
+            <a href="articoli/capitalismo-politica-estera.html" class="related-link">
+              <div class="related-item">
+                <span class="mini-category">Geopolitica</span>
+                <h3>Capitalismo globale e politica estera: quanta guerra economica reggiamo?</h3>
+              </div>
+            </a>
+          </div>
+
+          <!-- CARD OSSERVATORIO INSTAGRAM -->
+          <div class="sidebar-card">
+            <div class="eyebrow">Osservatorio Social</div>
+            <h3 style="font-size: 1.15rem; color: #fff; margin: 4px 0 8px;">@minervavoxlab</h3>
+            <p style="font-size: 13px; color: #94A3B8; line-height: 1.6; margin-bottom: 16px;">
+              Segui i dati, i grafici e le nostre inchieste sul canale ufficiale Instagram.
+            </p>
+            <a href="https://www.instagram.com/minervavoxlab" target="_blank" rel="noopener" class="btn btn-purple full" style="text-align: center; font-size: 13px;">
+              Segui su Instagram ↗
+            </a>
           </div>
         </aside>
       </div>
@@ -174,5 +199,86 @@
       <div class="footer-copy">© 2026 Minerva Osservatorio Politico. Tutti i diritti riservati.</div>
     </div>
   </footer>
+
+  <!-- ===== WIDGET FLOTTANTE DI GLAUCO (IN BASSO A DESTRA) ===== -->
+  <aside class="glauco-float-container" aria-label="Assistente Glauco">
+    <div class="glauco-bubble" id="glaucoBubble">
+      <div class="glauco-bubble-head">
+        <div class="glauco-bubble-title">
+          <span>🦉 Il Taccuino di Glauco</span>
+        </div>
+        <button class="glauco-bubble-close" id="glaucoClose" aria-label="Chiudi popup">×</button>
+      </div>
+      <p class="glauco-bubble-text">
+        Ciao! Sono <strong>Glauco</strong>, l'analista di Minerva. Questo articolo analizza la separazione tra rumore del giorno e struttura istituzionale del potere.
+      </p>
+      <div class="glauco-bubble-quote">
+        «Il diritto obbliga a guardare strutture, regole e rapporti tra istituzioni.»
+      </div>
+      <p class="glauco-bubble-text" style="margin-bottom: 14px; font-size: 12px; color: #94A3B8;">
+        Esplora i caroselli di approfondimento nella barra laterale.
+      </p>
+      <a href="index.html#feed" class="glauco-bubble-cta">
+        ← Torna al Feed Caroselli
+      </a>
+    </div>
+
+    <button class="glauco-float-btn" id="glaucoToggle" aria-expanded="false" title="Apri il punto di vista di Glauco">
+      <img src="img/glauco.png" alt="Glauco" class="glauco-float-avatar" />
+      <div class="glauco-float-label">
+        <span>Glauco</span>
+        <span class="glauco-float-sub">Note & Fonti</span>
+      </div>
+    </button>
+  </aside>
+
+  <!-- JAVASCRIPT: PROGRESS BAR & WIDGET GLAUCO -->
+  <script>
+    (() => {
+      // 1. Reading Progress Bar
+      const bar = document.getElementById('readingBar');
+      if (bar) {
+        const updateReadingBar = () => {
+          const scrollTop = window.scrollY;
+          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+          bar.style.width = `${Math.min(progress, 100)}%`;
+        };
+        updateReadingBar();
+        window.addEventListener('scroll', updateReadingBar, { passive: true });
+        window.addEventListener('resize', updateReadingBar);
+      }
+
+      // 2. Glauco Floating Widget Toggle
+      const toggle = document.getElementById('glaucoToggle');
+      const bubble = document.getElementById('glaucoBubble');
+      const close = document.getElementById('glaucoClose');
+
+      if (toggle && bubble && close) {
+        const toggleBubble = () => {
+          const isActive = bubble.classList.toggle('active');
+          toggle.setAttribute('aria-expanded', String(isActive));
+        };
+
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          toggleBubble();
+        });
+
+        close.addEventListener('click', (e) => {
+          e.stopPropagation();
+          bubble.classList.remove('active');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!bubble.contains(e.target) && !toggle.contains(e.target)) {
+            bubble.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

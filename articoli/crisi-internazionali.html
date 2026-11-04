@@ -5,16 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Crisi internazionali, diritto e propaganda - Minerva Osservatorio Politico</title>
   <meta name="description" content="Come leggere davvero una crisi internazionale tra rapporti di forza, diritto e propaganda." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
+  <!-- BARRA DI PROGRESSO LETTURA -->
   <div class="reading-progress" aria-hidden="true">
-  <div class="reading-progress-bar" id="readingBar"></div>
-</div>
+    <div class="reading-progress-bar" id="readingBar"></div>
+  </div>
+
+  <!-- HEADER UFFICIALE MINERVA -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand-group">
-        <a href="../index.html"><img src="../img/glauco.png" alt="Glauco" class="glauco-nav-avatar" /></a>
+        <a href="../index.html" title="Torna alla Home Minerva">
+          <img src="../img/glauco.png" alt="Glauco Mascotte" class="glauco-nav-avatar" />
+        </a>
         <div class="brand">
           <div class="eyebrow">Osservatorio Politico & Economico</div>
           <a href="../index.html" class="logo">MINERVA</a>
@@ -22,12 +30,10 @@
       </div>
 
       <nav class="main-nav">
-        <a href="#">Attualità</a>
-        <a href="#">Politica</a>
-        <a href="#">Giustizia</a>
-        <a href="#">Esteri</a>
-        <a href="#">Società</a>
-        <a href="#">Editoriali</a>
+        <a href="../index.html#feed">Feed Caroselli</a>
+        <a href="../index.html#editoriali">Editoriali</a>
+        <a href="../index.html#newsletter">Archivio Fonti</a>
+        <a href="https://www.instagram.com/minervavoxlab" target="_blank" rel="noopener" class="nav-ig-btn">@minervavoxlab ↗</a>
       </nav>
     </div>
   </header>
@@ -35,15 +41,15 @@
   <main>
     <section class="article-hero">
       <div class="container article-hero-inner">
-        <a href="../index.html" class="back-link">← Torna alla home</a>
-        <div class="pill pill-blue">Esteri</div>
+        <a href="../index.html#feed" class="back-link">← Torna al feed caroselli</a>
+        <div class="pill pill-blue">Esteri & Diritto Internazionale</div>
         <h1>Crisi internazionali, diritto e propaganda: come leggere davvero gli eventi</h1>
         <p class="article-subtitle">
           Tra rapporti di forza, diritto internazionale e costruzione della narrazione pubblica,
           capire una crisi significa resistere alla fretta di schierarsi.
         </p>
         <div class="meta">
-          <span>Redazione</span>
+          <span>Galassi Jacopo / Redazione</span>
           <span>•</span>
           <span>11 marzo 2026</span>
           <span>•</span>
@@ -135,81 +141,174 @@
         </article>
 
         <aside class="article-sidebar">
-          <div class="sidebar-card card">
-            <div class="eyebrow">Scheda articolo</div>
+          <!-- SCHEDA ARTICOLO -->
+          <div class="sidebar-card">
+            <div class="eyebrow">Scheda Articolo</div>
             <div class="sidebar-info">
               <div>
                 <span class="label">Categoria</span>
-                <strong>Esteri</strong>
+                <strong>Esteri & Diritto Internazionale</strong>
               </div>
               <div>
-                <span class="label">Firma</span>
-                <strong>Redazione</strong>
+                <span class="label">Autore</span>
+                <strong>Galassi Jacopo / Redazione</strong>
               </div>
               <div>
-                <span class="label">Tempo di lettura</span>
+                <span class="label">Tempo di Lettura</span>
                 <strong>4 minuti</strong>
               </div>
+              <div>
+                <span class="label">Metodo di Analisi</span>
+                <strong>Decostruzione della Propaganda</strong>
+              </div>
+            </div>
+            <div class="sidebar-badge">
+              <span class="badge-dot"></span> Fonti Ufficiali Verificate
             </div>
           </div>
 
-          <div class="sidebar-card card-dark">
-            <div class="eyebrow eyebrow-dark">Articoli correlati</div>
+          <!-- CAROSELLI CORRELATI -->
+          <div class="sidebar-card">
+            <div class="eyebrow">Caroselli Correlati</div>
+            
+            <a href="capitalismo-politica-estera.html" class="related-link">
+              <div class="related-item">
+                <span class="mini-category">Geopolitica</span>
+                <h3>Capitalismo globale e politica estera: quanta guerra economica reggiamo?</h3>
+              </div>
+            </a>
 
-            <div class="related-item">
-              <div class="mini-category soft-red">Esteri</div>
-              <h3>La politica internazionale spiegata oltre gli slogan</h3>
-            </div>
+            <a href="boldrin-bonelli-crescita-redistribuzione.html" class="related-link">
+              <div class="related-item">
+                <span class="mini-category">Politica Economica</span>
+                <h3>Boldrin-Bonelli: Non basta crescere, bisogna decidere chi incassa la crescita</h3>
+              </div>
+            </a>
 
-            <div class="related-item">
-              <div class="mini-category soft-red">Politica</div>
-              <h3>Quando il linguaggio pubblico orienta il giudizio prima dei fatti</h3>
-            </div>
+            <a href="dossier-separazione-carriere.html" class="related-link">
+              <div class="related-item">
+                <span class="mini-category">Giustizia & Dossier</span>
+                <h3>Dossier sulla separazione delle carriere: guida ragionata al voto</h3>
+              </div>
+            </a>
 
-            <div class="related-item related-last">
-              <div class="mini-category soft-red">Attualità</div>
-              <h3>Informazione veloce e consenso: perché capire richiede più tempo</h3>
-            </div>
+            <a href="spazio-politico-giovanile.html" class="related-link">
+              <div class="related-item">
+                <span class="mini-category">Politica Giovanile</span>
+                <h3>Perché ricostruire uno spazio politico giovanile non è nostalgia ma necessità</h3>
+              </div>
+            </a>
           </div>
 
-          <div class="sidebar-card light-card">
-            <div class="eyebrow">Newsletter</div>
-            <h3>Ricevi i prossimi articoli</h3>
-            <form class="newsletter-form stacked">
-              <input type="email" placeholder="La tua email" />
-              <button type="button" class="btn btn-blue full">Iscriviti</button>
-            </form>
+          <!-- CARD OSSERVATORIO INSTAGRAM -->
+          <div class="sidebar-card">
+            <div class="eyebrow">Osservatorio Social</div>
+            <h3 style="font-size: 1.15rem; color: #fff; margin: 4px 0 8px;">@minervavoxlab</h3>
+            <p style="font-size: 13px; color: #94A3B8; line-height: 1.6; margin-bottom: 16px;">
+              Analisi delle narrazioni di guerra e decodifica delle notizie internazionali su Instagram.
+            </p>
+            <a href="https://www.instagram.com/minervavoxlab" target="_blank" rel="noopener" class="btn btn-purple full" style="text-align: center; font-size: 13px;">
+              Segui su Instagram ↗
+            </a>
           </div>
         </aside>
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>
-        <div class="footer-logo">MINERVA</div>
-        <div class="footer-text">Osservatorio Politico & Economico · Divulgazione e Data-Journalism (@minervavoxlab)</div>
+      <div class="brand-group">
+        <img src="../img/glauco.png" alt="Glauco" class="glauco-nav-avatar" />
+        <div>
+          <div class="footer-logo">MINERVA</div>
+          <div class="footer-text">Osservatorio Politico & Economico · Divulgazione e Data-Journalism (@minervavoxlab)</div>
+        </div>
       </div>
       <div class="footer-copy">© 2026 Minerva Osservatorio Politico. Tutti i diritti riservati.</div>
     </div>
   </footer>
+
+  <!-- ===== WIDGET FLOTTANTE DI GLAUCO (IN BASSO A DESTRA) ===== -->
+  <aside class="glauco-float-container" aria-label="Assistente Glauco">
+    <div class="glauco-bubble" id="glaucoBubble">
+      <div class="glauco-bubble-head">
+        <div class="glauco-bubble-title">
+          <span>🦉 Il Taccuino di Glauco</span>
+        </div>
+        <button class="glauco-bubble-close" id="glaucoClose" aria-label="Chiudi popup">×</button>
+      </div>
+      <p class="glauco-bubble-text">
+        In questo articolo esaminiamo la differenza tra fatti materiali, diritto internazionale e propaganda nei conflitti.
+      </p>
+      <div class="glauco-bubble-quote">
+        «La propaganda non è una bugia totale: è una verità parziale usata per orientare il giudizio.»
+      </div>
+      <p class="glauco-bubble-text" style="margin-bottom: 14px; font-size: 12px; color: #94A3B8;">
+        Vedi tutti i caroselli di approfondimento nel feed.
+      </p>
+      <a href="../index.html#feed" class="glauco-bubble-cta">
+        ← Torna al Feed Caroselli
+      </a>
+    </div>
+
+    <button class="glauco-float-btn" id="glaucoToggle" aria-expanded="false" title="Apri il punto di vista di Glauco">
+      <img src="../img/glauco.png" alt="Glauco" class="glauco-float-avatar" />
+      <div class="glauco-float-label">
+        <span>Glauco</span>
+        <span class="glauco-float-sub">Note & Fonti</span>
+      </div>
+    </button>
+  </aside>
+
+  <!-- JAVASCRIPT: PROGRESS BAR & WIDGET GLAUCO -->
   <script>
-  (() => {
-    const bar = document.getElementById('readingBar');
-    if (!bar) return;
+    (() => {
+      // 1. Reading Progress Bar
+      const bar = document.getElementById('readingBar');
+      if (bar) {
+        const updateReadingBar = () => {
+          const scrollTop = window.scrollY;
+          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+          bar.style.width = `${Math.min(progress, 100)}%`;
+        };
+        updateReadingBar();
+        window.addEventListener('scroll', updateReadingBar, { passive: true });
+        window.addEventListener('resize', updateReadingBar);
+      }
 
-    const updateReadingBar = () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-      bar.style.width = `${Math.min(progress, 100)}%`;
-    };
+      // 2. Glauco Floating Widget Toggle
+      const toggle = document.getElementById('glaucoToggle');
+      const bubble = document.getElementById('glaucoBubble');
+      const close = document.getElementById('glaucoClose');
 
-    updateReadingBar();
-    window.addEventListener('scroll', updateReadingBar, { passive: true });
-    window.addEventListener('resize', updateReadingBar);
-  })();
-</script>
+      if (toggle && bubble && close) {
+        const toggleBubble = () => {
+          const isActive = bubble.classList.toggle('active');
+          toggle.setAttribute('aria-expanded', String(isActive));
+        };
+
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          toggleBubble();
+        });
+
+        close.addEventListener('click', (e) => {
+          e.stopPropagation();
+          bubble.classList.remove('active');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!bubble.contains(e.target) && !toggle.contains(e.target)) {
+            bubble.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
